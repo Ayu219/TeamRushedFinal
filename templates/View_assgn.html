@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Dashboard </title>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/Upload_btn.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/CS.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/Dropdown.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='js/Dashboard.js') }}">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- <script src="{{ url_for ('static',filename='js/Dashboard.js') }}" > </script>   -->
+
+<body>
+    <div class="container">
+        <aside>
+
+            <!-- Logo, Comapny_Name and Close Buttton -->
+            <div class="top">
+                <div class="logo">
+                    <img src="{{ url_for ('static',filename='images/logo.png') }}">
+                    <h2> Rushed <span class="danger"> Management </span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined"> close </span>
+                </div>
+            </div>
+
+            <!-- Sidebar Elements -->
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-sharp"> dashboard </span>
+                    <h3> Dashboard </h3>
+                </a>
+
+                <a href="#" class="active">
+                    <span class="material-symbols-sharp"> person </span>
+                    <h3> Assignment </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> account_tree </span>
+                    <h3> Analytics </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> notification_add </span>
+                    <h3> Notifications </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> sms </span>
+                    <h3> Messages </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> settings </span>
+                    <h3> Setting </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> report </span>
+                    <h3> Report </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> logout </span>
+                    <h3> Logout </h3>
+                </a>
+            </div>
+        </aside>
+        <!--  EBD OF ASIDE -->
+
+
+        <!-- Dashboard Starting  -->
+        <main>
+            <h1> Practical</h1>
+            <br>
+            <div class="sales">
+                <div class="middle">
+                    <div class="left">
+                        <h3> Ayush Tomar</h3>
+                    </div>
+                </div>
+
+                <br>
+            </div>
+
+            <br>
+            <br>
+
+            <div>
+
+                <!-- Solution Image -->
+                <div class="question">
+                    <img src="{{ url_for ('static',filename='images/Code.jpg') }}">
+                </div>
+                <br>
+                <br>
+
+                <!-- Verify Checkbox -->
+                <p>Verify the Solution:</p>
+                <br>
+
+                <label for="myCheck">VERIFY</label> 
+                <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+                <p id="text" style="display:inline; color:rgb(7, 255, 40);">Solution Verified!</p>
+
+                <script>
+                    function myFunction() {
+                    var checkBox = document.getElementById("myCheck");
+                    var text = document.getElementById("text");
+                    if (checkBox.checked == true){
+                        text.style.display = "block";
+                    } else {
+                        text.style.display = "none";
+                        }
+                    }
+                </script>
+
+                <br>
+                <br>
+
+                <!-- Download Button -->
+                <div class="upload-btn-wrapper">
+                    <a href="{{ url_for ('download_file') }}">
+                        <button class="btn">Download file</button>
+                    </a>
+                
+                </div>
+            </div>
+
+        </main>
+        <!-- END OF MAIN -->
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>

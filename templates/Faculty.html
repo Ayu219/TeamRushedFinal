@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Dashboard </title>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='js/Dashboard.js') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/Upload_btn.css') }}">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Mukta:wght@300;400;600;700;800&family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+
+            <!-- Logo, Comapny_Name and Close Buttton -->
+            <div class="top">
+                <div class="logo">
+                    <img src="{{ url_for ('static',filename='images/logo.png') }}">
+                    <h2> Rushed <span class="danger"> Management </span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-outlined"> close </span>
+                </div>
+            </div>
+
+            <!-- Sidebar Elements -->
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-symbols-sharp"> dashboard </span>
+                    <h3> Dashboard </h3>
+                </a>
+
+                <a href="{{ url_for ('Faculty_assgn') }}">
+                    <span class="material-symbols-sharp"> person </span>
+                    <h3> Assignment </h3>
+                </a>
+
+                <a href="{{ url_for ('Student_update') }}">
+                    <span class="material-symbols-sharp"> account_tree </span>
+                    <h3>Student Update</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> notification_add </span>
+                    <h3> Notifications </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> sms </span>
+                    <h3> Messages </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> settings </span>
+                    <h3> Setting </h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-sharp"> report </span>
+                    <h3> Report </h3>
+                </a>
+
+                <a href="{{ url_for ('Logout') }}">
+                    <span class="material-symbols-sharp"> logout </span>
+                    <h3> Logout </h3>
+                </a>
+            </div>
+        </aside>
+        <!--  EBD OF ASIDE -->
+
+
+        <!-- Dashboard Starting  -->
+        <main>
+            <h1> Dashboard </h1>
+
+
+            <!-- Customer-->
+            <div class="date">
+                <p> Faculty </p>
+            </div>
+
+
+            <!-- Insights -->
+            <div class="insights">
+
+                <!-- Sales Starting -->
+                <div class="sales">
+                    <span class="material-symbols-sharp"> grouped_bar_chart </span>
+                    <div class="middle">
+
+                        <div class="left">
+                            <h3> Total Attendance</h3>
+                            <h1> 96% </h1>
+                        </div>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"> </circle>
+                            </svg>
+
+                            <div class="number">
+                                <p> 96% </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <small class="text-muted"> Last 24 Hours </small>
+                </div>
+                <!-- END OF SALES -->
+
+
+                <!-- Expenses Starting -->
+                <div class="expenses">
+                    <span class="material-symbols-sharp"> currency_exchange </span>
+                    <div class="middle">
+
+                        <div class="left">
+                            <h3> Student Stats</h3>
+                            <h1> 73% </h1>
+                        </div>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"> </circle>
+                            </svg>
+
+                            <div class="number">
+                                <p> 73% </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <small class="text-muted"> Last 24 Hours </small>
+                </div>
+                <!-- END OF EXPENSES -->
+
+
+                <!-- Income Starting -->
+                <div class="income">
+                    <span class="material-symbols-sharp"> payments </span>
+                    <div class="middle">
+
+                        <div class="left">
+                            
+                                <h3> Assignments </h3>
+                            
+                            <h1> 10 </h1>
+                        </div>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"> </circle>
+                            </svg>
+
+                            <div class="number">
+                                <p> 42% </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <small class="text-muted"> Last 24 Hours </small>
+                </div>
+                <!-- END OF INCOME -->
+                <!-- END OF Insights -->
+
+
+                <!-- Recent Orders -->
+                <div class="recent-orders">
+                    <h2> Practicals </h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th> Subject Name </th>
+                                <th> Assignment </th>
+                                <th> Date</th>
+                                <th> Status </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td> Digital System Designs </td>
+                                <td> Assg.1 </td>
+                                <td> 09/11/22 </td>
+                                <td style="color:#fda725;"> Pending </td>
+                                <td class="primary"> Details </td>
+                            </tr>
+
+                            <tr>
+                                <td> Digital System Designs</td>
+                                <td> Assg. 2 </td>
+                                <td> 04/11/22 </td>
+                                <td style="color:#07c410d0;"> Done </td>
+                                <td class="primary"> Details </td>
+                            </tr>
+
+                            <tr>
+                                <td> Digital System Designs  </td>
+                                <td>  Assg.3 </td>
+                                <td> 04/10/22 </td>
+                                <td style="color:#fda725;"> Pending </td>
+                                <td class="primary"> Details </td>
+                            </tr>
+
+
+                            <tr>
+                                <td> Digital System Designs </td>
+                                <td> Assg.4 </td>
+                                <td> 10/10/22 </td>
+                                <td style="color:#fda725;"> Pending </td>
+                                <td class="primary"> Details </td>
+                            </tr>
+
+
+                            <tr>
+                                <td> Statistics </td>
+                                <td> Assg.1 </td>
+                                <td> 02/11/22 </td>
+                                <td style="color:#fd2525;"> Discarded </td>
+                                <td class="primary"> Details </td>
+                            </tr>
+
+                            <tr>
+                                <td>Statistics</td>
+                                <td> Assg.2 </td>
+                                <td> 05/11/22 </td>
+                                <td style="color:#fda725;"> Pending </td>
+                                <td class="primary"> Details </td>
+                            </tr>
+
+                            <tr>
+                                <td> Statistics  </td>
+                                <td>  Assg.3 </td>
+                                <td> 08/11/22 </td>
+                                <td style="color:#07c410d0;;"> Done </td>
+                                <td class="primary"> Details </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <!-- Show All -->
+                    <a href="#"> Show All </a>
+                </div>
+        </main>
+        <!-- END OF MAIN -->
+
+
+        <!-- Right Side -->
+        <!-- Top Buttons -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp"> menu </span>
+                </button>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hii, <b> Manu Mishra </b></p>
+                        <small class="text-muted"> Faculty </small>
+                    </div>
+
+                    <div class="profile-photo">
+                        <img src="{{ url_for ('static',filename='images/picc.png') }}">
+                    </div>
+                </div>
+            </div>    
+            <!-- END OF TOP -->
+
+            <!-- Profile Section -->
+            <div class="recent-updates">
+                <h2> Notifications </h2>
+                <div class="updates">
+
+                    <!-- Profile-1 -->
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{{ url_for ('static',filename='images/profile-2.jpg') }}">
+                        </div>
+
+                        <div class="message">
+                            <p> <b> Daniel Shew </b> <br> Sent a new message</p>
+                            <small class="text-muted"> 5 Minutes Ago </small>
+                        </div>
+                    </div>
+
+                    <!-- Profile-2 -->
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{{ url_for ('static',filename='images/profile-3.jpg') }}">
+                        </div>
+
+                        <div class="message">
+                            <p> <b> Manikandan </b> <br> Sent a new message</p>
+                            <small class="text-muted"> 23 Minutes Ago </small>
+                        </div>
+                    </div>
+
+                    <!-- Profile-3 -->
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{{ url_for ('static',filename='images/profile-4.jpg') }}">
+                        </div>
+
+                        <div class="message">
+                            <p> <b> Jenefier Joe </b> <br> Sent a new message.</p>
+                            <small class="text-muted"> 55 Minutes Ago </small>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+            <!-- END OF RECENT UPDATES -->
+
+
+            <!-- Sales ANALYTICS -->
+            <div class="sales-analytics">
+                <h2> Chats </h2>
+                <div class="updates">
+
+                    <!-- Box-1 -->
+                    <div class="updatee">
+                        <div class="message">
+                            <p> <b> Manu Mishra</b> <br> Sent a file </p>
+                            <p style="color: rgb(3, 194, 3);">  43 Minutes Ago  </p> 
+                        </div>
+                    </div>
+
+                    <!-- Box--2 -->
+                    <div class="updatee">
+                        <div class="message">
+                            <p> <b> Ayush Tomar </b> <br> Sent you a Photo.</p>
+                            <p style="color: rgb(194, 3, 3);">  1 Day Ago </p> 
+                        </div>
+                    </div>
+
+
+                    <!-- Box--3 -->
+                    <div class="updatee">
+                        <div class="message">
+                            <p> <b> Anurag Shah </b> <br>Sent a file. </p>
+                            <p style="color: rgb(3, 194, 3);"> 3 Minutes Ago  </p> 
+                        </div>
+                    </div>
+
+
+                    <!-- Box--4 -->
+                    <div class="dashed">
+                        <div class="message">
+                            <p> <b> Start Chat </b></p>
+                            <small class="add-file"> New Conversation. </small>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>
